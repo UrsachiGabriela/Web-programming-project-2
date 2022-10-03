@@ -1,0 +1,65 @@
+<aside>
+    <nav>
+        <a href="#autentificare" class="selectedLink">CONTUL MEU</a>  
+        <a href="#produse" class="selectedLink">PRODUSE DISPONIBILE</a>
+    </nav>
+</aside>
+
+
+<div>
+    <% if ( user != null){ %>
+        <div id="autentificare" class="container">
+            <h2 class="Welcome">Bine ai venit, <%= user %> !</h2>
+            <form class="logout" action="/delogare" method="get"> 
+                <div id="text">Logat ca : ' <%= user %> ' </div>   
+                <br><br>     
+                <input id="submitBtn" type="submit" value="Delogare">
+           </form>
+     
+        </div>
+
+        <div>
+            <form  class="container">
+                <button id="cumparaturi" type="submit" formaction="/vizualizare-cos">Vizualizare coș</button> 
+               
+
+                <button id="bd" type="submit" formaction="/creare-bd">Creare BD</button> 
+                <button  id="bd" type="submit" formaction="/inserare-bd">Inserare BD</button> 
+                
+            </form>
+
+            
+        </div>
+
+        <div id="produse2">
+            <% for(const i of produse) {    %>
+                <form action="/adaugare-cos" method="post" class="container"> 
+                    <input type="hidden" name="idProdus" value= <%= i.idProdus %>>
+                    <%= i.idProdus %> ) <%= i.numeProdus %>    
+                    <input id="adaugaCos" type="submit" value="&#x1f6d2;">
+                </form>
+            <% } %>
+            <!--<button onclick="cumpara(); return false;">Creare BD</button> -->
+            
+        </div>
+
+
+        
+    <% }
+    else{ %>
+        <div id="autentificare">
+            <h2><a href="/autentificare">AUTENTIFICARE</a></h2>
+
+        </div>
+
+        <h1 class="prod">Produsele disponbile pe acest site : </h1>
+        <div id="produse">
+            
+            <% for(const i of produse) {    %>
+                <p><%= i.idProdus %> ) <%= i.numeProdus %>  </p>                  
+            <% } %>
+        </div>
+
+    <% } %>
+
+</div>

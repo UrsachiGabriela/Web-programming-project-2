@@ -1,0 +1,18 @@
+<aside>
+    <nav>
+        <a href="#rezultat" class="selectedLink">REZULTAT</a>  
+     </nav>
+</aside>
+
+<div>
+<% if ( user != null){ %>
+    <form id="formChestionar" class="logout" action="/delogare" method="get"> 
+        <div id="text">Logat ca : ' <%= user %> ' </div>   
+        <br><br>     
+        <input id="submitBtn" type="submit" value="Delogare">
+   </form>
+<% } %>
+
+<p id="rezultat" class="rezultat">Numărul de răspunsuri corecte este : <%= raspunsuri_corecte %> </p>
+
+</div>

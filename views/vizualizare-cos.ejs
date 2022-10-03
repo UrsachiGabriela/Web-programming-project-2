@@ -1,0 +1,27 @@
+<aside>
+    <nav>
+    </nav>
+</aside>
+
+<div class="cosCumparaturi">
+    <% if ( listaCumparaturi.length ==0 ){ %>
+        <h2>Coșul tău de cumpărături este gol.</h2>
+    
+     <% } 
+     else
+     { %>
+        <h2>Coșul tău de cumpărături</h2>
+        <ul>
+            <% for(const produs of listaCumparaturi)
+            { %>
+                <li>
+                    <%= produs.numeProdus %>  
+                </li>
+        
+            <% } %>
+        
+        </ul>
+    
+    
+    <% } %>    
+</div>

@@ -1,0 +1,59 @@
+<aside>
+    <nav>
+        <a href="#cauta" class="selectedLink">CAUTĂ PRODUS</a>  
+     </nav>
+</aside>
+<div id="cauta">
+    <% if ( user != null){ %>
+        <form id="formChestionar" class="logout" action="/delogare" method="get"> 
+            <div id="text">Logat ca : ' <%= user %> ' </div>   
+            <br><br>     
+            <input id="submitBtn" type="submit" value="Delogare">
+       </form>
+    <% } %>  
+
+    <form class="cautaProdus" action="/cauta-produs" method="get">
+        <fieldset>
+                 <label class="col1" for="numeProdus">Denumire produs</label>
+                 <input class="col2" type="text" name="numeProdus" id="numeProdus"><br>
+                                 
+            
+             </fieldset>
+             <input id="submitBtn" type="submit" value="Caută">
+     </form>
+     
+     
+     
+     <div class="produsCautat">
+   
+
+         <% if(result!=null) 
+         { 
+             if(result.length!=0)
+             {  %>
+                 <h2 class="success">Există produse conform căutării</h2>
+                <ul>
+
+            
+                 <% for(const x of result)
+                 { %>
+         
+                     <li><%= x.idProdus %> )  <%= x.numeProdus %></li>
+                     
+                 <% }  %>
+                </ul>   
+                <% }    
+             else
+             { %>
+                     <h2 class="error"> Nu există produse care să corespundă căutării.</h2>
+             <% } 
+                 
+     
+         }
+             %>
+     
+     
+      
+        
+     </div>
+</div>

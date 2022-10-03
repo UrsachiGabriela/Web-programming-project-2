@@ -1,0 +1,8 @@
+[
+    {"utilizator": "test", "nume":"Nume1", "prenume":"Prenume1", "parola": "test",  "email": "myName%40yahoo.com", "telefon": "0743673872",  "varsta": "30"},
+    {"utilizator": "mike", "nume":"Popescu" , "prenume":"Mihai","parola": "mike",  "email": "mikeee3%40gmail.com", "telefon": "0789675346",  "varsta": "40"},
+    {"utilizator": "andreiP","nume":"Popovici","prenume":"Andrei", "parola": "andreiP",  "email": "popAndrei%40yahoo.com", "telefon": "0749129872", "varsta": "19"},
+    {"utilizator": "amelia122","nume":"Rusu","prenume":"Amelia", "parola": "amelia122",  "email": "am33%40yahoo.com", "telefon": "0742993872",  "varsta": "21"},
+    {"utilizator": "gabi","nume":"Ursachi","prenume":"Gabriela", "parola": "gabi","email": "gUrsachi%40gmail.com", "telefon": "0749164572", "varsta": "21"}, 
+    {"utilizator": "ana","nume":"Sandu","prenume":"Ana", "parola": "ana", "email": "sAna%40yahoo.com", "telefon": "0749121252", "varsta": "23"}
+]

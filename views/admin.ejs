@@ -1,0 +1,53 @@
+
+
+
+
+
+    <% if(access==true) {%>
+    <aside>
+        <nav>
+            <a href="#adaugareProdus" class="selectedLink">ADAUGĂ PRODUS</a>  
+        </nav>
+    </aside>
+    
+<div>
+    <% if ( user != null){ %>
+        <form id="formChestionar" class="logout" action="/delogare" method="get"> 
+            <div id="text">Logat ca : ' <%= user %> ' </div>   
+            <br><br>     
+            <input id="submitBtn" type="submit" value="Delogare">
+       </form>
+    <% } %>
+
+        <form class="addProduct" action="/adauga-produs" method="post">
+            
+        <% if(message) 
+        {
+            if(message.length>0) { %>
+    
+        <div class="alert">
+            <%= message %>
+        </div>
+        <br>
+    <% }
+    } %>
+            
+            <fieldset>
+                <label class="col1" for="numeProdus">Denumire produs</label>
+                <input class="col2" type="text" name="numeProdus" id="numeProdus"><br>
+                                
+           
+            </fieldset>
+            <input id="submitBtn" type="submit" value="Adaugă produsul în baza de date">
+    
+         </form>
+        
+     <% } 
+     else
+     { %>
+        <p class="error">Acces interzis.</p>
+     <% } %>  
+
+
+
+</div>

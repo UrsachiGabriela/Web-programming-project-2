@@ -1,0 +1,22 @@
+[
+	{
+		"intrebare": "Ce companie a realizat primul telefon mobil comercial?",
+		"variante": ["Nokia", "IBM", "Motorola"],
+		"corect": 2
+	},
+	{
+		"intrebare": "În ce an a apărut primul iPhone?",
+		"variante": ["2005", "2007", "2009"],
+		"corect": 1
+	},
+	{
+		"intrebare": "Din ce țară provine gigantul Samsung?",
+		"variante": ["Coreea de Sud", "Japonia", "China"],
+		"corect": 0
+	},
+	{
+		"intrebare": "Cum se numeşte teama de a rămâne fără telefonul mobil, afecţiune din ce în ce mai întâlnită în rândul tinerilor?",
+		"variante": ["Nomofobia", "Smartofobia", "Fonofobia"],
+		"corect": 0
+	}	
+]

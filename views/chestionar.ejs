@@ -1,0 +1,51 @@
+<aside>
+    <nav>
+        <a href="#1" class="selectedLink">ÎNTREBAREA 1</a>  
+        <a href="#2" class="selectedLink">ÎNTREBAREA 2</a>  
+        <a href="#3" class="selectedLink">ÎNTREBAREA 3</a>  
+        <a href="#4" class="selectedLink">ÎNTREBAREA 4</a>  
+        <br><br>
+        <a href="#submitBtn" class="selectedLink">SUBMIT</a>  
+    </nav>
+</aside>
+
+<div>
+
+
+    <% if ( user != null){ %>
+        <form id="formChestionar" class="logout" action="/delogare" method="get"> 
+            <div id="text">Logat ca : ' <%= user %> ' </div>   
+            <br><br>     
+            <input id="submitBtn" type="submit" value="Delogare">
+       </form>
+    <% } %>
+    
+    <form action="/rezultat-chestionar" method="post">
+    <% for(let x in intrebari) { 
+        let c=0; <!-- c -> indexul raspunsului pt fiecare intrebare -->
+    %>
+        <!-- parcurgere vector de intrebari    -->
+        <!-- x -> index    -->
+        <fieldset id="<%= x-0+1 %>">
+            <legend>Întrebarea <%= x-0+1 %>:</legend>
+        <p id="intrebare_chestionar">
+            <%= intrebari[x].intrebare %>
+        </p>
+    
+        <!-- parcurgere variante de raspuns pt fiecare intrebare    -->
+        <% for(const v of intrebari[x].variante) { %>
+            <input type="radio" name="r<%= x %>" value="<%= c++ %>" />
+            <%= v %>
+             <br/>
+        
+    
+        <% } %>    
+        </fieldset>
+    
+    <% } %>
+    <br><br>
+    <input type="submit" value="Submit" id="submitBtn">
+    </form>
+    
+    <!--     -->
+</div>
